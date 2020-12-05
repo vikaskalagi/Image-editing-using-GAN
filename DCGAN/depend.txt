@@ -1,0 +1,25 @@
+to be installed
+
+* Python 3.3+
+* Tensorflow 1.6
+* pillow (PIL)
+* matplotlib 
+* CelebA Face Database
+* scipy 1.2.0
+To train the model: 
+
+python train_model.py --data_path celeba --input_fname_pattern .jpg --model_dir dcgan_model --sampled_images_dir gen_images_train
+
+* data_path: Directory of the database folder having training images
+* input_fname_pattern: Glob pattern of training images
+* model_dir: Directory path to save checkpoints
+* sampled_images_dir: Directory where images sampled from the generator (while training the model) are stored  
+
+
+To test a trained model: 
+
+python sampling.py --model_dir dcgan_model\try_6 --sampled_dir gen_images_test
+
+
+
+
